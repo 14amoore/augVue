@@ -1,12 +1,15 @@
 Vue.component('blog-post', {
-  template:
-    '\
-  <p>\
-    {{ title }}\
-    {{ content }}\
-    <button v-on:click="$emit(\'remove\')">Remove Feels</button>\
-  </p>\
-',
+  template: `
+  <div>
+    <h3>
+      {{ title }}
+    </h3>
+    <p>
+      {{ content }}
+      <button v-on:click="$emit('remove')">Remove Feels</button>
+    </p>
+  </div>
+`,
   props: ['title', 'content']
 });
 

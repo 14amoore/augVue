@@ -12,35 +12,45 @@
     <div class="post">
       <form v-on:submit.prevent="newPost">
         <label for="new-post">Share some feels:</label>
-        <textarea class="title"
+        <textarea
+          class="title"
           v-model="newPostTitle"
           id="new-post"
           placeholder="Title here"
         ></textarea>
-        <textarea class="content"
+        <textarea
+          class="content"
           v-model="newPostContent"
           id="new-post"
           placeholder="Content here"
         ></textarea>
         <button>Do. IT.</button>
       </form>
-      <post-title
-      is="post-title"
-      v-for="(post, index) in posts"
-      v-bind:key="post.id"
-      v-bind:title="post.title"
-      v-on:remove="posts.splice(index, 1)"
+      <!-- <post-title
+        is="post-title"
+        v-for="(post, index) in posts"
+        v-bind:key="post.id"
+        v-bind:title="post.title"
+        v-on:remove="posts.splice(index, 1)"
       >
       </post-title>
       <post-content
-      is="post-content"
-      v-for="(post, index) in posts"
-      v-bind:key="post.id"
-      v-bind:content="post.content"
-      v-on:remove="posts.splice(index, 1)"
+        is="post-content"
+        v-for="(post, index) in posts"
+        v-bind:key="post.id"
+        v-bind:content="post.content"
+        v-on:remove="posts.splice(index, 1)"
       >
-      </post-content>
-      </div>
+      </post-content> -->
+      <blog-post
+        is="blog-post"
+        v-for="(post, index) in posts"
+        v-bind:key="post.id"
+        v-bind:title="post.title"
+        v-bind:content="post.content"
+        v-on:remove="posts.splice(index, 1)"
+      >
+      </blog-post>
     </div>
     <script src="./js/blog3.js"></script>
   </body>
