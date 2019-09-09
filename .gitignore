@@ -1,0 +1,17 @@
+node_modules
+.eslintrc.js
+.prettierrc
+aBlog.html
+blog.html
+index.html
+rBlog.html
+css
+js/bean.js
+js/blog.js
+js/blog2.js
+js/blog4.js
+js/comp1.js
+js/index.js
+js/mComp.js
+js/nameComp.js
+toDo.js
